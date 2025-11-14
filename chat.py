@@ -4,21 +4,21 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 from datetime import datetime
 import time
+import copy
 
-# ---------------------- FIREBASE INIT ----------------------
 if not firebase_admin._apps:
-    # Load the secrets dict
-    firebase_config = st.secrets["firebase"]
+    # Make a copy of the secrets dict
+    firebase_config = copy.deepcopy(st.secrets["firebase"])
     
-    # Fix the private key line breaks
+    # Fix the private key line breaks in the copy
     firebase_config["private_key"] = firebase_config["private_key"].replace("\\n", "\n")
     
-    # Create credentials and initialize app
+    # Initialize Firebase
     cred = credentials.Certificate(firebase_config)
     firebase_admin.initialize_app(cred)
 
-# Get Firestore client
 db = firestore.client()
+
 
 
 
@@ -262,6 +262,7 @@ st.markdown(
             f'<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',
             unsafe_allow_html=True
            ) 
+
 
 
 

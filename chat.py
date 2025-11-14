@@ -7,10 +7,20 @@ import time
 
 # ---------------------- FIREBASE INIT ----------------------
 if not firebase_admin._apps:
-    cred = credentials.Certificate(st.secrets["firebase"])
+    # Load the secrets dict
+    firebase_config = st.secrets["firebase"]
+    
+    # Fix the private key line breaks
+    firebase_config["private_key"] = firebase_config["private_key"].replace("\\n", "\n")
+    
+    # Create credentials and initialize app
+    cred = credentials.Certificate(firebase_config)
     firebase_admin.initialize_app(cred)
 
+# Get Firestore client
 db = firestore.client()
+
+
 
 # ---------------------- PASSWORD HASH ----------------------
 def hash_password(password):
@@ -252,6 +262,7 @@ st.markdown(
             f'<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',
             unsafe_allow_html=True
            ) 
+
 
 
 

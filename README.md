@@ -21,15 +21,24 @@ Author: Sakib Hossain Tahmid
 - Clear full chat history  
 - View all users  
 - Manage messages  
-
+### 🔑 Security Features
+-  Fully encrypted password in Database
+-  You can also make the chat encrypted (with python **hash** library)
+-  Even database admin can't see passwords
 ## 🛠️ Tech Stack
 - **Python**
 - **Streamlit**
 - **Firebase**
+## 📊 Database Setup
+- Step-1: *Create a database in Firebase(BY GOOGLE)*
+- Step-2: *Copy the api file and make it like Toml format(Don't share with anyone and keep it secret)*
+- Step-3: *Use it as env. varible file*
+- Step-4: *Deploy it in any python server*
+  
+<br>***"IN MY CASE, I USE STREAMLIT FREE SERVER AND PASTE THE API KEY IN STREAMLIT SECRETS."***
 
-## 🔧 Setup
 
-
+## 🔧 Setup(Local)
 
 #### 1.Clone
 ```bash

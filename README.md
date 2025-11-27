@@ -22,18 +22,21 @@ Author: Sakib Hossain Tahmid
 - View all users  
 - Manage messages  
 ### 🔑 Security Features
--  Fully encrypted password in Database
--  You can also make the chat encrypted (with python **hash** library)
--  Even database admin can't see passwords
+- Passwords are fully encrypted before being stored in the database.
+- End-to-end encrypted chat can be enabled using Python’s **hash** libraries.
+- Passwords remain inaccessible even to database administrators.
+
 ## 🛠️ Tech Stack
 - **Python**
 - **Streamlit**
 - **Firebase**
+
 ## 📊 Database Setup
-- Step-1: *Create a database in Firebase(BY GOOGLE)*
-- Step-2: *Copy the api file and make it like Toml format(Don't share with anyone and keep it secret)*
-- Step-3: *Use it as env. varible file*
-- Step-4: *Deploy it in any python server*
+- **Step 1:** Create a Firebase database.
+- **Step 2:** Copy the API configuration file and convert it into a TOML-style format. Keep this file strictly confidential.
+- **Step 3:** Use the file as your environment variable configuration.
+- **Step 4:** Deploy the application to any Python-compatible server.
+
   
 <br>***"IN MY CASE, I USE STREAMLIT FREE SERVER AND PASTE THE API KEY IN STREAMLIT SECRETS."***
 

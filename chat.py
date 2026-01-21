@@ -163,7 +163,39 @@ Guideline:
 <a href="https://github.com/sakib-12345/chat-app-with-firebase">Github Project Link</a>
 </div>
 """, unsafe_allow_html=True)
+    st.sidebar.markdown("""
+<style>
+.footer {
+    text-align: center;              /* left-aligned */
+    padding: 10px 5px;             /* smaller padding */
+    background-color: transparent; /* transparent background */
+    font-size: 12px;               /* smaller font */
+    line-height: 1.5;
+}
 
+.footer a {
+    color: gray;           
+    text-decoration: none; 
+    margin-right: 15px; 
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #555; 
+}
+</style>
+
+<div class="footer">
+    <a href="https://www.facebook.com/sakibhossain.tahmid" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/_sakib_000001" target="_blank">Instagram</a>
+    <a href="https://x.com/_sakib_00000001" target="_blank">X</a>
+    <a href="https://github.com/sakib-12345" target="_blank">GitHub</a>
+    <a href="mailto:sakibhossaintahmid@gmail.com">Email</a>
+</div>
+""", unsafe_allow_html=True)
+
+    st.markdown("<p style=\"font-size:12px; color:#c084fc;\">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</p>", unsafe_allow_html=True)
     st.stop()
 
 # ---------------------- SIDEBAR ----------------------
@@ -315,10 +347,8 @@ st.markdown(
 )
 
 
-st.markdown(
-            f'<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',
-            unsafe_allow_html=True
-           ) 
+st.markdown(f'<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',unsafe_allow_html=True) 
+
 
 
 

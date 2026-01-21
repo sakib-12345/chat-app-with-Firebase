@@ -88,7 +88,7 @@ if "logged_in" not in st.session_state:
 
 if not st.session_state.logged_in:
     st.title("💬 Chat App")
-    tab1, tab2 = st.tabs(["Login 🔑", "Sign Up 📝"])
+    tab1, tab2, tab3 = st.tabs(["Login 🔑", "Sign Up 📝", "About ❓"])
 
     with tab1:
         username = st.text_input("Username", placeholder="Enter your username")
@@ -112,6 +112,57 @@ if not st.session_state.logged_in:
                 st.success(msg)
             else:
                 st.error(msg)
+
+    with tab3:
+         
+        col1, col2 = st.columns(2)
+
+    # ------------------- COLUMN 1 -------------------
+        with col1:
+            with st.expander("Who made this app?"):
+                st.write("Hey, I’m Sakib. Nice to meet you.")
+
+            with st.expander("How does the chat work?"):
+                st.write(
+                "Messages and users are stored in Firebase Firestore, "
+                "which acts as a real-time backend database."
+            )
+
+            with st.expander("Is my data safe?"):
+                st.write(
+                "Yep. Firebase handles authentication and security rules. "
+                "No ads, no tracking nonsense, just the data needed for the app."
+            )
+
+    # ------------------- COLUMN 2 -------------------
+        with col2:
+            with st.expander("Why use Firebase?"):
+                st.write("### Because it just makes sense.")
+                st.write(
+                "Firebase gives real-time updates, solid security, and a generous free tier. "
+                "It’s fast, scalable, and way more production-ready than spreadsheets."
+            )
+                st.write("**PERFECT FOR SMALL TO MEDIUM APPS**")
+
+            with st.expander("Why this web app when apps like Messenger exist?"):
+                st.write(
+                "Because it’s your own platform. You control the UI, the data, and the features. "
+                "Way more fun than using someone else’s app."
+            )
+
+            with st.expander("Is the app easy to deploy?"):
+                st.markdown("""
+Yes. This app is designed to stay simple and beginner-friendly.
+
+Using Firebase removes the need for managing servers while still teaching
+real-world full-stack concepts like authentication, databases, and real-time sync.
+
+<div style="text-align: center; color: orange;">
+Thinking about building your own web app?<br>
+Guideline:
+<a href="https://github.com/sakib-12345/chat-app-with-firebase">Github Project Link</a>
+</div>
+""", unsafe_allow_html=True)
 
     st.stop()
 
@@ -268,6 +319,7 @@ st.markdown(
             f'<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',
             unsafe_allow_html=True
            ) 
+
 
 
 

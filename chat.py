@@ -87,6 +87,7 @@ if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 
 if not st.session_state.logged_in:
+    st.title("💬 Chat App")
     tab1, tab2 = st.tabs(["Login 🔑", "Sign Up 📝"])
 
     with tab1:
@@ -267,6 +268,7 @@ st.markdown(
             f'<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',
             unsafe_allow_html=True
            ) 
+
 
 
 

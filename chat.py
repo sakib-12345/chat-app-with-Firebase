@@ -194,7 +194,7 @@ Guideline:
     <a href="mailto:sakibhossaintahmid@gmail.com">Email</a>
 </div>
 """, unsafe_allow_html=True)
-    st.markdown(f'<div style="text-align: center; color: #c084fc;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',unsafe_allow_html=True) 
+    st.markdown(f'<div style="text-align: center; color: #c084fc; font-size: 12px">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',unsafe_allow_html=True) 
   
     st.stop()
 
@@ -348,6 +348,7 @@ st.markdown(
 
 
 st.markdown(f'<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',unsafe_allow_html=True) 
+
 
 
 

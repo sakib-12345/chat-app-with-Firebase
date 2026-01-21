@@ -163,7 +163,7 @@ Guideline:
 <a href="https://github.com/sakib-12345/chat-app-with-firebase">Github Project Link</a>
 </div>
 """, unsafe_allow_html=True)
-    st.sidebar.markdown("""
+    st.markdown("""
 <style>
 .footer {
     text-align: center;              /* left-aligned */
@@ -194,8 +194,8 @@ Guideline:
     <a href="mailto:sakibhossaintahmid@gmail.com">Email</a>
 </div>
 """, unsafe_allow_html=True)
-
-    st.markdown("<p style=\"font-size:12px; color:#c084fc;\">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</p>", unsafe_allow_html=True)
+    st.markdown(f'<div style="text-align: center; color: #c084fc;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',unsafe_allow_html=True) 
+  
     st.stop()
 
 # ---------------------- SIDEBAR ----------------------
@@ -348,6 +348,7 @@ st.markdown(
 
 
 st.markdown(f'<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',unsafe_allow_html=True) 
+
 
 
 
